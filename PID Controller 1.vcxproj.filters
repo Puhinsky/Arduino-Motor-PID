@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{4edf3530-8308-43dc-af19-0b7573d0fe77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Encoder">
+      <UniqueIdentifier>{99635a6f-1559-451e-8ec7-5a0d87b87dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Motor">
+      <UniqueIdentifier>{652b1aee-e3d3-4a3b-9b60-99a615d14d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\PID">
+      <UniqueIdentifier>{445535ec-fd19-4108-98cf-744605ccac4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PIDController_1.ino" />
+    <None Include="..\libraries\TimerOne-r11.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.PID Controller 1.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Encoder.h">
+      <Filter>Classes\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Motor.h">
+      <Filter>Classes\Motor</Filter>
+    </ClInclude>
+    <ClInclude Include="PID.h">
+      <Filter>Classes\PID</Filter>
+    </ClInclude>
+    <ClInclude Include="__vm\.PIDController_1.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Encoder.cpp">
+      <Filter>Classes\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Motor.cpp">
+      <Filter>Classes\Motor</Filter>
+    </ClCompile>
+    <ClCompile Include="PID.cpp">
+      <Filter>Classes\PID</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
