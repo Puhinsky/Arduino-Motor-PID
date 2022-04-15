@@ -20,9 +20,8 @@ PID rightPID = PID(3, 4, 0.01);
 void setup() {
 	Serial.begin(9600);
 
-	leftPID.targetValue = 4;
-
-	rightPID.targetValue = 4;
+	leftPID.targetValue = 1;
+	rightPID.targetValue = 1;
 
 	Timer1.initialize(PIDUpdateRate * 1000000);
 	Timer1.attachInterrupt(onTimer);
@@ -38,7 +37,6 @@ void onLeftEncoder() {
 void onRightEncoder() {
 	rightEncoder.onTick();
 }
-
 
 void onTimer() {
 	MotorControl(leftMotor, leftEncoder, leftPID, PIDUpdateRate);

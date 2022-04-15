@@ -32,6 +32,12 @@ void Motor::setPwm(uint8_t pwm) {
 }
 
 void Motor::setDeltaPwm(int8_t deltaPwm) {
+	if (deltaPwm >= 0) {
+		currentPwm = constrain(currentPwm, 0, 255 - deltaPwm);
+	}
+	else {
+		currentPwm = constrain(currentPwm, -deltaPwm, 255);
+	}
 	currentPwm = uint8_t(currentPwm + deltaPwm);
 	setPwm(currentPwm);
 }
