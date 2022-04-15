@@ -20,12 +20,14 @@ class Motor
  public:
 	 Motor(uint8_t pinA, uint8_t pinB, uint8_t signalPin);
 	 void setDirection(Direction direction);
-	 void setPWM(uint8_t pwm);
+	 void setPwm(uint8_t pwm);
+	 void setDeltaPwm(int8_t deltaPwm);
 
 private:
 	uint8_t pinA;
 	uint8_t pinB;
 	uint8_t signalPin;
+	uint8_t currentPwm;
 };
 
 extern Motor ;

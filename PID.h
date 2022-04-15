@@ -12,6 +12,9 @@
 class PID
 {
  public:
+	 PID();
+	 PID(float pK, float iK, float dK);
+
 	 void calculate(float currentValue, float dt);
 
 	 float targetValue;
@@ -22,6 +25,7 @@ class PID
 
 private:
 	float iValue;
+	float previousError;
 };
 
 extern PID ;

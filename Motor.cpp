@@ -10,10 +10,8 @@ Motor::Motor(uint8_t pinA, uint8_t pinB, uint8_t signalPin) {
 	this->signalPin = signalPin;
 }
 
-void Motor::setDirection(Direction direction)
-{
-	switch (direction)
-	{
+void Motor::setDirection(Direction direction) {
+	switch (direction) {
 	case FORWARD:
 		digitalWrite(pinA, false);
 		digitalWrite(pinB, true);
@@ -29,10 +27,14 @@ void Motor::setDirection(Direction direction)
 	}
 }
 
-void Motor::setPWM(uint8_t pwm) {
+void Motor::setPwm(uint8_t pwm) {
 	analogWrite(signalPin, pwm);
 }
 
+void Motor::setDeltaPwm(int8_t deltaPwm) {
+	currentPwm = uint8_t(currentPwm + deltaPwm);
+	setPwm(currentPwm);
+}
 
-Motor ;
 
+Motor;
