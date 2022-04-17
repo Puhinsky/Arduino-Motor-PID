@@ -15,7 +15,7 @@ Motor leftMotor = Motor(12, 4, 5);
 Motor rightMotor = Motor(10, 8, 13);
 
 PID leftPID = PID(8, 4, 0.01);
-PID rightPID = PID(3, 4, 0.01);
+PID rightPID = PID(8, 4, 0.01);
 
 void setup() {
 	Serial.begin(9600);
