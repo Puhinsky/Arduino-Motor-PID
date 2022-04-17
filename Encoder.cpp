@@ -18,7 +18,7 @@ void Encoder::reset() {
 	counter = 0;
 }
 
-unsigned int Encoder::getCounter() {
+uint8_t Encoder::getCounter() {
 	return counter;
 }
 

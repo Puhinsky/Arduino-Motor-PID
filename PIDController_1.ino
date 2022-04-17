@@ -1,3 +1,4 @@
+#include "MotorRegulator.h"
 #include "Encoder.h"
 #include "Motor.h"
 #include "PID.h"
@@ -8,46 +9,39 @@ void onRightEncoder();
 
 #define PIDUpdateRate 0.05
 
-Encoder leftEncoder = Encoder(3, onLeftEncoder);
-Encoder rightEncoder = Encoder(2, onRightEncoder);
+Encoder* leftEncoder = new Encoder(3, onLeftEncoder);
+Encoder* rightEncoder = new Encoder(2, onRightEncoder);
 
-Motor leftMotor = Motor(12, 4, 5);
-Motor rightMotor = Motor(10, 8, 13);
+Motor* leftMotor = new Motor(12, 4, 5);
+Motor* rightMotor = new Motor(10, 8, 13);
 
-PID leftPID = PID(8, 4, 0.01);
-PID rightPID = PID(8, 4, 0.01);
+PID* leftPID = new PID(8, 4, 0.01);
+PID* rightPID = new PID(8, 4, 0.01);
+
+MotorRegulator leftMotorRegulator = MotorRegulator(leftMotor, leftEncoder, leftPID);
+MotorRegulator rightMotorRegulator = MotorRegulator(rightMotor, rightEncoder, rightPID);
 
 void setup() {
 	Serial.begin(9600);
 
-	leftPID.targetValue = 1;
-	rightPID.targetValue = 1;
+	leftMotorRegulator.SetVelocity(2);
+	rightMotorRegulator.SetVelocity(-2);
 
 	Timer1.initialize(PIDUpdateRate * 1000000);
 	Timer1.attachInterrupt(onTimer);
-
-	leftMotor.setDirection(FORWARD);
-	rightMotor.setDirection(FORWARD);
 }
 
 void onLeftEncoder() {
-	leftEncoder.onTick();
+	leftEncoder->onTick();
 }
 
 void onRightEncoder() {
-	rightEncoder.onTick();
+	rightEncoder->onTick();
 }
 
 void onTimer() {
-	MotorControl(leftMotor, leftEncoder, leftPID, PIDUpdateRate);
-	MotorControl(rightMotor, rightEncoder, rightPID, PIDUpdateRate);
-}
-
-void MotorControl(Motor& motor, Encoder& encoder, PID& pid, float updateRate) {
-	pid.calculate(encoder.getCounter(), updateRate);
-	motor.setDeltaPwm(pid.result);
-	//debugGraph(pid.result, encoder.getCounter());
-	encoder.reset();
+	leftMotorRegulator.Update(PIDUpdateRate);
+	rightMotorRegulator.Update(PIDUpdateRate);
 }
 
 void loop() {

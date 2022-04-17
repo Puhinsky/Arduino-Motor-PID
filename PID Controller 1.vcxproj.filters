@@ -25,6 +25,9 @@
     <Filter Include="Classes\PID">
       <UniqueIdentifier>{445535ec-fd19-4108-98cf-744605ccac4f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Motor Regulator">
+      <UniqueIdentifier>{163bbdcd-ee7a-4175-9fd5-cd2737058826}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="PIDController_1.ino" />
@@ -46,6 +49,9 @@
     <ClInclude Include="__vm\.PIDController_1.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MotorRegulator.h">
+      <Filter>Classes\Motor Regulator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Encoder.cpp">
@@ -56,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="PID.cpp">
       <Filter>Classes\PID</Filter>
+    </ClCompile>
+    <ClCompile Include="MotorRegulator.cpp">
+      <Filter>Classes\Motor Regulator</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -15,11 +15,10 @@ public:
 	Encoder(uint8_t pin, void(*callback)());
 	void onTick();
 	void reset();
-	unsigned int getCounter();
+	uint8_t getCounter();
 
 private:
-	unsigned int counter = 0;
-
+	uint8_t counter = 0;
 };
 
 extern Encoder ;
