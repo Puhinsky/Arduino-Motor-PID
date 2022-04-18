@@ -23,7 +23,12 @@ void PID::calculate(float currentValue, float dt) {
 	float dValue = dK * (error - previousError) / dt;
 	previousError = error;
 
-	result = pValue + iValue + dValue;
+	result = constrain(pValue + iValue + dValue, minValue, maxValue);
+}
+
+void PID::setMaxMin(float minValue, float maxValue) {
+	this->minValue = minValue;
+	this->maxValue = maxValue;
 }
 
 

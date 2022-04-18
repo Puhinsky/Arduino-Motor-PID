@@ -21,6 +21,9 @@ void Motor::setDirection(Direction direction) {
 		digitalWrite(pinA, true);
 		digitalWrite(pinB, false);
 		break;
+	case STOP:
+		digitalWrite(pinA, true);
+		digitalWrite(pinB, true);
 
 	default:
 		break;

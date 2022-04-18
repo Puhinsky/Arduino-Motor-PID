@@ -12,7 +12,8 @@
 enum Direction
 {
 	FORWARD,
-	BACKWARD
+	BACKWARD,
+	STOP
 };
 
 class Motor
@@ -27,7 +28,7 @@ private:
 	uint8_t pinA;
 	uint8_t pinB;
 	uint8_t signalPin;
-	uint8_t currentPwm;
+	uint8_t currentPwm = 0;
 };
 
 extern Motor ;

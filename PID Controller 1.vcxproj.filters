@@ -28,6 +28,21 @@
     <Filter Include="Classes\Motor Regulator">
       <UniqueIdentifier>{163bbdcd-ee7a-4175-9fd5-cd2737058826}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Robot">
+      <UniqueIdentifier>{505a4b20-c4ce-4283-9641-a08d90887cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Trajectories">
+      <UniqueIdentifier>{b94c1455-b49c-4331-b1c1-c2cd8ca6d225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Trajectories\Forward Trajectory">
+      <UniqueIdentifier>{2444068a-e1c5-4520-8bd1-55f037d41216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Trajectories\Trajectory">
+      <UniqueIdentifier>{2305883e-c97b-42ec-b5cc-cc1d8445cc27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Trajectories\Turn on Place Trajectory">
+      <UniqueIdentifier>{175a9bca-344b-4159-be2d-13fd30299afa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="PIDController_1.ino" />
@@ -52,6 +67,18 @@
     <ClInclude Include="MotorRegulator.h">
       <Filter>Classes\Motor Regulator</Filter>
     </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>Classes\Robot</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardTrajectory.h">
+      <Filter>Classes\Trajectories\Forward Trajectory</Filter>
+    </ClInclude>
+    <ClInclude Include="Trajectory.h">
+      <Filter>Classes\Trajectories\Trajectory</Filter>
+    </ClInclude>
+    <ClInclude Include="TurnOnPlaceTrajectory.h">
+      <Filter>Classes\Trajectories\Turn on Place Trajectory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Encoder.cpp">
@@ -65,6 +92,18 @@
     </ClCompile>
     <ClCompile Include="MotorRegulator.cpp">
       <Filter>Classes\Motor Regulator</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>Classes\Robot</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardTrajectory.cpp">
+      <Filter>Classes\Trajectories\Forward Trajectory</Filter>
+    </ClCompile>
+    <ClCompile Include="Trajectory.cpp">
+      <Filter>Classes\Trajectories\Trajectory</Filter>
+    </ClCompile>
+    <ClCompile Include="TurnOnPlaceTrajectory.cpp">
+      <Filter>Classes\Trajectories\Turn on Place Trajectory</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

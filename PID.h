@@ -16,16 +16,20 @@ class PID
 	 PID(float pK, float iK, float dK);
 
 	 void calculate(float currentValue, float dt);
+	 void setMaxMin(float minValue, float maxValue);
 
-	 float targetValue;
-	 float pK;
-	 float iK;
-	 float dK;
-	 float result;
+	 float targetValue = 0;
+	 float pK = 0;
+	 float iK = 0;
+	 float dK = 0;
+	 float result = 0;
 
 private:
-	float iValue;
-	float previousError;
+	float iValue = 0;
+	float previousError = 0;
+
+	float minValue = 0;
+	float maxValue = 0;
 };
 
 extern PID ;

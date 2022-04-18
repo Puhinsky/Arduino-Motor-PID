@@ -18,13 +18,16 @@ class MotorRegulator
  public:
 	 MotorRegulator(Motor* motor, Encoder* encoder, PID* pid);
 
-	 void Update(float updateRate);
-	 void SetVelocity(float velocity);
+	 void update(float updateRate);
+	 void setVelocity(float velocity);
+	 void stop();
 
 private:
 	Motor* motor;
 	Encoder* encoder;
 	PID* pid;
+
+	float calculateVelocity(uint8_t ticks, uint8_t stepsCount, float time);
 };
 
 extern MotorRegulator ;

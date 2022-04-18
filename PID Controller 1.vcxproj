@@ -109,6 +109,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="ForwardTrajectory.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Motor.h">
       <SubType>
       </SubType>
@@ -121,11 +125,27 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Robot.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Trajectory.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TurnOnPlaceTrajectory.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="__vm\.PID Controller 1.vsarduino.h" />
     <ClInclude Include="__vm\.PIDController_1.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Encoder.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ForwardTrajectory.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -138,6 +158,18 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="PID.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Trajectory.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TurnOnPlaceTrajectory.cpp">
       <SubType>
       </SubType>
     </ClCompile>
