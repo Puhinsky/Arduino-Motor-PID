@@ -79,6 +79,9 @@
     <ClInclude Include="TurnOnPlaceTrajectory.h">
       <Filter>Classes\Trajectories\Turn on Place Trajectory</Filter>
     </ClInclude>
+    <ClInclude Include="__vm\.Arduino-Motor-PID.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Encoder.cpp">

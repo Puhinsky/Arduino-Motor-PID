@@ -22,9 +22,10 @@ class MotorRegulator
 	 void setVelocity(float velocity);
 	 void stop();
 
+	 Encoder* encoder;
+
 private:
 	Motor* motor;
-	Encoder* encoder;
 	PID* pid;
 
 	float calculateVelocity(uint8_t ticks, uint8_t stepsCount, float time);

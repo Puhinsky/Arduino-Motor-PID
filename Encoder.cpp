@@ -13,10 +13,16 @@ Encoder::Encoder(uint8_t pin, void(*callback)(), uint8_t stepsCount) {
 
 void Encoder::onTick() {
 	counter++;
+	distanceCounter++;
 }
 
 void Encoder::reset() {
 	counter = 0;
+}
+
+void Encoder::resetDistanceCounter()
+{
+	distanceCounter = 0;
 }
 
 uint8_t Encoder::getCounter() {
@@ -26,6 +32,11 @@ uint8_t Encoder::getCounter() {
 uint8_t Encoder::getStepsCount()
 {
 	return stepsCount;
+}
+
+unsigned long Encoder::getAbsoluteCounter()
+{
+	return distanceCounter;
 }
 
 Encoder ;
